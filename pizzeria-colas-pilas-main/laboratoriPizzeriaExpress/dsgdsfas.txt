@@ -1,0 +1,31 @@
+¿Por qué un sistema de delivery usa Queue para los pedidos pero Stack para la bitácora? ¿Qué problema surgiría si invertimos las estructuras?
+
+Invertir las estructuras destruye la lógica:
+
+Si usas una Pila para una entrega el primer cliente se queda al fondo y su comida llega fría o nunca
+Si usas una Cola para una bitácora para ver el error más reciente tendrías que procesar primero muchos viejos, haciendo tomo menosa efeciente y lento.
+
+
+
+
+
+¿Por qué es obligatorio verificar Count == 0 antes de Dequeue() o Pop()? ¿Qué ocurre en ejecución si se omite?
+
+Si sacas algo de una cola vacía, el programa explota.
+
+Intenta leer memoria que no existe y te lanza un errorazo en la cara.
+
+
+
+
+
+En el método Deshacer, ¿por qué es necesario analizar el texto con .StartsWith() antes de revertir? ¿Qué error lógico evitaría esto?
+
+
+Si no usas .StartsWith() el error lógico que cometer es el de revisar sin ver, el metodo Deshacer asumiría que el último cambio en el historial es exactamente el que esperas, cuando en realidad el usuario pudo haber sido otra cosa entre si.
+
+
+
+
+¿Qué ventaja tiene entregar mediante Fork + Pull Request en lugar de un archivo comprimido? ¿Cómo facilita la la retroalimentación?
+Mandar un .zip muy tardio. Con Fork + PR, el revisor no tiene que bajarse tu archivo, descomprimirlo y rezar para que compile; ve los cambios directo en la web.

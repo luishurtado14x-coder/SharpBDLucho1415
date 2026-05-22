@@ -1,0 +1,11 @@
+# SharpDevelop / .NET Framework
+bin/
+obj/
+*.suo
+*.user
+*.cache
+*.log
+*.pdb
+*.resharper
+.vs/
+*.sln.ide
